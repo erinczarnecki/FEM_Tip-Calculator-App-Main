@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --input: hsl(189, 41%, 97%);
+  --text: hsl(184, 14%, 56%);
+  --background: hsl(185, 41%, 84%);
+  --active: hsl(172, 67%, 45%);
+  --dark: hsl(183, 100%, 15%);
+}
+* {
+  font-family: "Space Mono", serif;
+  font-weight: 700;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--background);
+  margin: auto;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+header {
+  word-wrap: break-word;
+  margin: auto;
+  text-transform: uppercase;
+  color: var(--dark);
+  letter-spacing: 8px;
+  text-align: center;
+  opacity: 75%;
+  max-width: 30vw;
+}
+
+.bill-container {
+  background-color: var(--white);
+  left: 0;
+  margin: auto;
+  border-radius: 25px;
+  padding: 1.5rem;
+}
+
+section {
+  margin: 0 0 2rem 0;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.user-input {
+  font-size: 24px;
+}
+
+#bill-input,
+#people-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  background-color: var(--input);
+  border-radius: 5px;
+  color: var(--dark);
+  padding: 0 10px 0 20px;
+}
+
+#money-img,
+#people-img {
+  height: 20px;
+  align-self: center;
+  object-fit: contain;
+  opacity: 80%;
+  max-width: 20px;
+}
+
+#base-bill,
+#people-count {
+  color: var(--dark);
+  background-color: var(--input);
+  border: none;
+  width: 75%;
+  text-align: right;
+}
+
+#base-bill::placeholder,
+#people-count::placeholder {
+  color: var(--dark);
+  opacity: 90%;
+}
+
+.tip-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.percent-btn {
+  letter-spacing: 1px;
+  color: var(--input);
+  background-color: var(--dark);
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 8px 0;
+  border: none;
+}
+
+.percent-btn:hover {
+  color: var(--dark);
+  background-color: var(--active);
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.custom-percent {
+  color: var(--text);
+  background-color: var(--input);
+  letter-spacing: 1px;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 5px 0;
+  border: none;
+  text-align: center;
+}
+
+#results-container {
+  background-color: var(--dark);
+  color: var(--input);
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 0;
+}
+
+#tip-amounts,
+#total-amounts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  line-height: 1.1rem;
+}
+
+.totals {
+  flex-wrap: wrap;
+  max-width: 50%;
+  overflow: hidden;
+}
+.totals > h2 {
+  font-size: 0.8rem;
+  opacity: 95%;
+}
+
+.per-person {
+  opacity: 50%;
+  padding: 0;
+  font-size: 0.8rem;
+  margin-top: -0.7rem;
+}
+
+.result-number {
+  font-size: 24px;
+  color: var(--active);
+  text-align: right;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+#reset-btn {
+  color: var(--dark);
+  background-color: var(--active);
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 8px 0;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+#reset-btn:hover {
+  cursor: pointer;
+  background-color: var(--input);
+  transition: ease 0.3s;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 40px 0 5px 0;
+  margin: 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
